@@ -1,7 +1,7 @@
 /* HERO */
 .hero { position:relative; height:100vh; min-height:680px; display:flex; align-items:center; overflow:hidden; }
 .heroBg { position:absolute; inset:0; }
-.heroOverlay { position:absolute; inset:0; background:linear-gradient(105deg,rgba(11,29,53,.92) 0%,rgba(11,29,53,.62) 52%,rgba(11,29,53,.25) 100%); }
+.heroOverlay { position:absolute; inset:0; background:linear-gradient(105deg,rgba(11,29,53,.72) 0%,rgba(11,29,53,.45) 52%,rgba(11,29,53,.15) 100%); }
 .heroContent { position:relative; z-index:2; max-width:1320px; margin:0 auto; padding:0 60px; width:100%; }
 .heroTitle {
   font-size: clamp(2.8rem,5.5vw,4.6rem);
