@@ -101,13 +101,10 @@ export default function Home() {
           <div className={styles.aboutInner}>
             <div className={`${styles.aboutImgWrap} fade-in d1`}>
               <div className={styles.aboutImgMain}>
-                <div className="img-ph" style={{ width:'100%', height:440, borderRadius:0 }}>
-                  <span>About Image</span><small>640×440px — warehouse / products</small>
-                </div>
+                <img src="/about-main.png" alt="About Nityan Exports" style={{ width:'100%', height:440, objectFit:'cover', borderRadius:0, display:'block' }} />
               </div>
               <div className={styles.aboutImgAccent}>
-                <div className="img-ph" style={{ width:'100%', height:220, borderRadius:0 }}>
-                  <span>Products</span><small>300×220px</small>
+                <img src="/about-accent.png" alt="Nityan Products" style={{ width:'100%', height:220, objectFit:'cover', borderRadius:0, display:'block' }} />
                 </div>
               </div>
               <div className={styles.accentBadge}>
