@@ -82,7 +82,7 @@ export default function Products() {
         <section className={styles.cta}>
           <div className={styles.ctaInner}>
             <div className={`${styles.ctaImg} fade-in d1`}>
-              <img src="/about-main.png" alt="Export" style={{ width:'100%', height:340, objectFit:'cover', borderRadius:2, display:'block' }} />
+              <img src="/cta-products.png" alt="Export" style={{ width:'100%', height:340, objectFit:'cover', borderRadius:2, display:'block' }} />
             </div>
             <div className={styles.ctaText}>
               <span className="eyebrow fade-up d1">Ready to Order?</span>
