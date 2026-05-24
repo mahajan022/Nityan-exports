@@ -25,9 +25,7 @@ export default function About() {
 
         {/* Hero */}
         <section className={styles.pageHero}>
-          <div className="img-ph" style={{ position:'absolute', inset:0, borderRadius:0, border:'none', background:'linear-gradient(135deg,#8fafc4,#6a90ac)' }}>
-            <span>About Banner</span><small>1920×500px — office / team / India</small>
-          </div>
+         <img src="/about-banner.png" alt="About Nityan Exports" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="eyebrow light fade-up d1">About Us</span>
