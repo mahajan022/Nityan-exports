@@ -3,6 +3,15 @@ import Link from 'next/link';
 import { ArrowRight, Globe, Shield, TrendingUp, Award, ChevronDown, CheckCircle, Leaf, Package, Clock, Users } from 'lucide-react';
 import styles from '../styles/Home.module.css';
 
+const productBg = [
+  'linear-gradient(135deg,#2d5a27,#4a8f3f)',
+  'linear-gradient(135deg,#8b4513,#c8870a)',
+  'linear-gradient(135deg,#3d2b1f,#6b4226)',
+  'linear-gradient(135deg,#c8870a,#e8a020)',
+  'linear-gradient(135deg,#1a4a2e,#2d7a4a)',
+  'linear-gradient(135deg,#4a3728,#8b6914)',
+];
+
 const tickerItems = ['Fruits & Vegetables','Dehydrated Onion Powder','Ginger Powder','Garlic Powder','Amla Powder','Banana Powder','Leather Goods','Handicrafts','Copper Utensils','Bio Fertilizer','Vermicompost','Hing (Asafoetida)'];
 
 const stats = [
@@ -13,12 +22,12 @@ const stats = [
 ];
 
 const products = [
-  { name: 'Fruits & Vegetables',     cat: 'Agricultural',  desc: 'Farm-fresh, handpicked produce with cold-chain logistics to international markets.' },
-  { name: 'Spice & Herb Powders',    cat: 'Spice Powders', desc: 'Dehydrated Onion, Ginger, Garlic, Amla & Banana Powder — hygienically processed.' },
-  { name: 'Leather Goods',           cat: 'Craftsmanship', desc: 'Premium Indian leather craftsmanship meeting global quality and finishing standards.' },
-  { name: 'Handicrafts & Copper',    cat: 'Craftsmanship', desc: 'Authentic Indian artistry — copper utensils, décor, and handmade ethnic creations.' },
-  { name: 'Bio Fertilizer',          cat: 'Organic',       desc: 'Organic Bio Fertilizer and Vermicompost for sustainable agriculture worldwide.' },
-  { name: 'Hing (Asafoetida)',       cat: 'Spice Powders', desc: 'Pure, high-grade Hing sourced and exported with strict quality control.' },
+  { name: 'Fruits & Vegetables',  cat: 'Agricultural',  desc: 'Farm-fresh, handpicked produce with cold-chain logistics to international markets.' },
+  { name: 'Spice & Herb Powders', cat: 'Spice Powders', desc: 'Dehydrated Onion, Ginger, Garlic, Amla & Banana Powder — hygienically processed.' },
+  { name: 'Leather Goods',        cat: 'Craftsmanship', desc: 'Premium Indian leather craftsmanship meeting global quality and finishing standards.' },
+  { name: 'Handicrafts & Copper', cat: 'Craftsmanship', desc: 'Authentic Indian artistry — copper utensils, décor, and handmade ethnic creations.' },
+  { name: 'Bio Fertilizer',       cat: 'Organic',       desc: 'Organic Bio Fertilizer and Vermicompost for sustainable agriculture worldwide.' },
+  { name: 'Hing (Asafoetida)',    cat: 'Spice Powders', desc: 'Pure, high-grade Hing sourced and exported with strict quality control.' },
 ];
 
 const why = [
@@ -29,10 +38,10 @@ const why = [
 ];
 
 const process = [
-  { n: '01', t: 'Enquiry',    d: 'Send us your product requirement, quantity and destination country.' },
-  { n: '02', t: 'Sourcing',   d: 'We identify the best Indian manufacturer or supplier for you.' },
-  { n: '03', t: 'Sample',     d: 'A product sample is dispatched for your approval before bulk order.' },
-  { n: '04', t: 'Shipment',   d: 'We handle all documentation, logistics and shipping to destination.' },
+  { n: '01', t: 'Enquiry',  d: 'Send us your product requirement, quantity and destination country.' },
+  { n: '02', t: 'Sourcing', d: 'We identify the best Indian manufacturer or supplier for you.' },
+  { n: '03', t: 'Sample',   d: 'A product sample is dispatched for your approval before bulk order.' },
+  { n: '04', t: 'Shipment', d: 'We handle all documentation, logistics and shipping to destination.' },
 ];
 
 const countries = ['UAE', 'USA', 'UK', 'Germany', 'Australia', 'Canada', 'Saudi Arabia', 'Netherlands', 'Singapore', 'France', 'Japan', 'Italy'];
@@ -99,13 +108,22 @@ export default function Home() {
         {/* ── ABOUT INTRO ── */}
         <section className={styles.about}>
           <div className={styles.aboutInner}>
-            {/* FIX: accentBadge is now correctly inside aboutImgWrap */}
+
+            {/* LEFT: image stack + badge — all inside one wrapper */}
             <div className={`${styles.aboutImgWrap} fade-in d1`}>
               <div className={styles.aboutImgMain}>
-                <img src="/about-main.png" alt="About Nityan Exports" style={{ width:'100%', height:440, objectFit:'cover', borderRadius:0, display:'block' }} />
+                <img
+                  src="/about-main.png"
+                  alt="About Nityan Exports"
+                  style={{ width:'100%', height:440, objectFit:'cover', borderRadius:0, display:'block' }}
+                />
               </div>
               <div className={styles.aboutImgAccent}>
-                <img src="/about-accent.png" alt="Nityan Products" style={{ width:'100%', height:220, objectFit:'cover', borderRadius:0, display:'block' }} />
+                <img
+                  src="/about-accent.png"
+                  alt="Nityan Products"
+                  style={{ width:'100%', height:220, objectFit:'cover', borderRadius:0, display:'block' }}
+                />
               </div>
               <div className={styles.accentBadge}>
                 <Globe size={22} />
@@ -116,6 +134,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* RIGHT: text */}
             <div className={styles.aboutText}>
               <span className="eyebrow fade-up d1">Who We Are</span>
               <h2 className={`${styles.sectionTitle} fade-up d2`}>A Trusted Bridge Between India and the World</h2>
@@ -133,8 +152,9 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <Link href="/about" className={`btn-gold fade-up d5`}>Learn More <ArrowRight size={15} /></Link>
+              <Link href="/about" className="btn-gold fade-up d5">Learn More <ArrowRight size={15} /></Link>
             </div>
+
           </div>
         </section>
 
@@ -150,7 +170,9 @@ export default function Home() {
               {products.map((p, i) => (
                 <div className={`${styles.prodCard} fade-up d${(i % 3) + 1}`} key={i}>
                   <div className={styles.prodImgWrap}>
-                    <img src={`/product-${i+1}.png`} alt={p.name} style={{ width:'100%', height:200, objectFit:'cover', display:'block' }} />
+                    <div style={{ width:'100%', height:200, background: productBg[i], display:'flex', alignItems:'center', justifyContent:'center' }}>
+                      <span style={{ color:'rgba(255,255,255,0.4)', fontSize:'2rem' }}>🌿</span>
+                    </div>
                     <div className={styles.prodOverlay} />
                   </div>
                   <div className={styles.prodBody}>
@@ -198,11 +220,40 @@ export default function Home() {
                 <p>Our export network spans 20+ countries across Asia, Europe, the Middle East, North America, and Oceania. We partner with importers, distributors, and retailers who value quality, consistency, and transparent trade.</p>
                 <p>Every shipment is backed by our full documentation support — from Certificate of Origin to Phytosanitary Certificates — ensuring smooth customs clearance at every destination.</p>
                 <div className={styles.countryTags}>
-                  {countries.map(c => <span className={styles.countryTag} key={c}><Globe size={11}/>{c}</span>)}
+                  {countries.map(c => (
+                    <span className={styles.countryTag} key={c}><Globe size={11}/>{c}</span>
+                  ))}
                 </div>
               </div>
               <div className={`${styles.reachMap} fade-in d2`}>
-                <img src="/world-map.png" alt="Global Reach" style={{ width:'100%', height:300, objectFit:'cover', borderRadius:2, display:'block' }} />
+                <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" style={{ width:'100%', height:'auto', borderRadius:2 }}>
+                  <rect width="800" height="420" fill="#eef4f8"/>
+                  <path d="M80,80 L180,70 L220,100 L200,160 L160,180 L120,170 L80,140 Z" fill="#0b1d35" opacity="0.65"/>
+                  <path d="M150,200 L200,190 L220,250 L210,320 L170,340 L140,300 L130,240 Z" fill="#0b1d35" opacity="0.65"/>
+                  <path d="M340,60 L410,55 L430,90 L400,110 L360,105 L330,85 Z" fill="#c8870a" opacity="0.85"/>
+                  <path d="M340,130 L400,120 L420,180 L410,270 L370,290 L330,260 L320,190 Z" fill="#0b1d35" opacity="0.65"/>
+                  <path d="M430,55 L580,50 L620,90 L610,150 L560,170 L480,160 L440,130 L420,90 Z" fill="#c8870a" opacity="0.8"/>
+                  <path d="M500,130 L530,125 L545,160 L530,200 L505,195 L490,165 Z" fill="#e8a020" opacity="1"/>
+                  <path d="M580,240 L660,230 L680,290 L650,330 L590,320 L565,275 Z" fill="#0b1d35" opacity="0.65"/>
+                  <line x1="515" y1="162" x2="155" y2="105" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+                  <line x1="515" y1="162" x2="375" y2="78"  stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+                  <line x1="515" y1="162" x2="450" y2="145" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+                  <line x1="515" y1="162" x2="630" y2="275" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+                  <line x1="515" y1="162" x2="175" y2="230" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+                  <circle cx="155" cy="105" r="5" fill="#c8870a"/>
+                  <circle cx="375" cy="78"  r="5" fill="#c8870a"/>
+                  <circle cx="450" cy="145" r="5" fill="#c8870a"/>
+                  <circle cx="630" cy="275" r="5" fill="#c8870a"/>
+                  <circle cx="175" cy="230" r="5" fill="#c8870a"/>
+                  <circle cx="620" cy="82"  r="5" fill="#c8870a"/>
+                  <circle cx="515" cy="162" r="12" fill="#c8870a" opacity="0.25">
+                    <animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="515" cy="162" r="7" fill="#c8870a"/>
+                  <text x="515" y="178" textAnchor="middle" fill="#fff" fontSize="7" fontFamily="sans-serif" fontWeight="bold">INDIA</text>
+                  <text x="400" y="400" textAnchor="middle" fill="#8a9ab0" fontSize="12" fontFamily="sans-serif">Nityan Exports — Serving 20+ Countries Worldwide</text>
+                </svg>
               </div>
             </div>
           </div>
@@ -231,7 +282,7 @@ export default function Home() {
         {/* ── BANNER CTA ── */}
         <section className={styles.banner}>
           <div className={styles.bannerBg}>
-            <img src="/banner.png" alt="Banner" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+            <div style={{ width:'100%', height:'100%', background:'linear-gradient(135deg,#1e3f6a,#0b1d35)', position:'absolute', inset:0 }} />
           </div>
           <div className={`${styles.bannerContent} fade-up`}>
             <span className="eyebrow light">Partner With Us</span>
