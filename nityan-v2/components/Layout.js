@@ -19,7 +19,7 @@ function useScrollReveal() {
 function PageLoader({ hidden }) {
   return (
     <div className={`page-loader${hidden ? ' hidden' : ''}`}>
-      <img src="/logo.jpg" alt="Nityan Exports" className="loader-logo" />
+      <img src="/logo.png" alt="Nityan Exports" className="loader-logo" />
       <div className="loader-bar-wrap">
         <div className="loader-bar" />
       </div>
