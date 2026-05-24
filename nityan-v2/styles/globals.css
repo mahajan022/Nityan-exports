@@ -40,7 +40,7 @@ button { cursor: pointer; border: none; background: none; font-family: 'Nunito S
 /* ── PAGE LOADER ───────────────────────────────── */
 .page-loader {
   position: fixed; inset: 0;
-  background: var(--white);
+  background: var(--navy);
   z-index: 9999;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 28px;
