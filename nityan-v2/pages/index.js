@@ -202,7 +202,33 @@ export default function Home() {
                 </div>
               </div>
               <div className={`${styles.reachMap} fade-in d2`}>
-                <img src="/world-map.png" alt="Global Reach" style={{ width:'100%', height:300, objectFit:'cover', borderRadius:2, display:'block' }} />
+                <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" style={{width:'100%',height:'auto',borderRadius:2}}>
+  <rect width="800" height="420" fill="#eef4f8"/>
+  <path d="M80,80 L180,70 L220,100 L200,160 L160,180 L120,170 L80,140 Z" fill="#0b1d35" opacity="0.65"/>
+  <path d="M150,200 L200,190 L220,250 L210,320 L170,340 L140,300 L130,240 Z" fill="#0b1d35" opacity="0.65"/>
+  <path d="M340,60 L410,55 L430,90 L400,110 L360,105 L330,85 Z" fill="#c8870a" opacity="0.85"/>
+  <path d="M340,130 L400,120 L420,180 L410,270 L370,290 L330,260 L320,190 Z" fill="#0b1d35" opacity="0.65"/>
+  <path d="M430,55 L580,50 L620,90 L610,150 L560,170 L480,160 L440,130 L420,90 Z" fill="#c8870a" opacity="0.8"/>
+  <path d="M500,130 L530,125 L545,160 L530,200 L505,195 L490,165 Z" fill="#e8a020" opacity="1"/>
+  <path d="M580,240 L660,230 L680,290 L650,330 L590,320 L565,275 Z" fill="#0b1d35" opacity="0.65"/>
+  <line x1="515" y1="162" x2="155" y2="105" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+  <line x1="515" y1="162" x2="375" y2="78" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+  <line x1="515" y1="162" x2="450" y2="145" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+  <line x1="515" y1="162" x2="630" y2="275" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+  <line x1="515" y1="162" x2="175" y2="230" stroke="#c8870a" strokeWidth="1.5" strokeDasharray="6,4" opacity="0.6"/>
+  <circle cx="155" cy="105" r="5" fill="#c8870a"/>
+  <circle cx="375" cy="78" r="5" fill="#c8870a"/>
+  <circle cx="450" cy="145" r="5" fill="#c8870a"/>
+  <circle cx="630" cy="275" r="5" fill="#c8870a"/>
+  <circle cx="175" cy="230" r="5" fill="#c8870a"/>
+  <circle cx="515" cy="162" r="12" fill="#c8870a" opacity="0.25">
+    <animate attributeName="r" values="8;18;8" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="515" cy="162" r="7" fill="#c8870a"/>
+  <text x="515" y="178" textAnchor="middle" fill="#fff" fontSize="7" fontFamily="sans-serif" fontWeight="bold">INDIA</text>
+  <text x="400" y="408" textAnchor="middle" fill="#8a9ab0" fontSize="12" fontFamily="sans-serif">Nityan Exports — Serving 20+ Countries Worldwide</text>
+</svg>
               </div>
             </div>
           </div>
