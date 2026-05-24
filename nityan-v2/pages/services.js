@@ -104,9 +104,7 @@ export default function Services() {
         <section className={styles.cta}>
           <div className={styles.ctaInner}>
             <div className={`${styles.ctaImg} fade-in d1`}>
-              <div className="img-ph" style={{ width:'100%', height:360 }}>
-                <span>Global Trade Image</span><small>640×360px — world map / shipping</small>
-              </div>
+              <img src="/cta-products.png" alt="Export" style={{ width:'100%', height:340, objectFit:'cover', borderRadius:2, display:'block' }} />
             </div>
             <div className={styles.ctaText}>
               <span className="eyebrow fade-up d1">Get Started</span>
