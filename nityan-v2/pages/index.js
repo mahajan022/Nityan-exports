@@ -99,13 +99,13 @@ export default function Home() {
         {/* ── ABOUT INTRO ── */}
         <section className={styles.about}>
           <div className={styles.aboutInner}>
+            {/* FIX: accentBadge is now correctly inside aboutImgWrap */}
             <div className={`${styles.aboutImgWrap} fade-in d1`}>
               <div className={styles.aboutImgMain}>
                 <img src="/about-main.png" alt="About Nityan Exports" style={{ width:'100%', height:440, objectFit:'cover', borderRadius:0, display:'block' }} />
               </div>
               <div className={styles.aboutImgAccent}>
                 <img src="/about-accent.png" alt="Nityan Products" style={{ width:'100%', height:220, objectFit:'cover', borderRadius:0, display:'block' }} />
-                </div>
               </div>
               <div className={styles.accentBadge}>
                 <Globe size={22} />
@@ -115,6 +115,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
             <div className={styles.aboutText}>
               <span className="eyebrow fade-up d1">Who We Are</span>
               <h2 className={`${styles.sectionTitle} fade-up d2`}>A Trusted Bridge Between India and the World</h2>
@@ -149,9 +150,7 @@ export default function Home() {
               {products.map((p, i) => (
                 <div className={`${styles.prodCard} fade-up d${(i % 3) + 1}`} key={i}>
                   <div className={styles.prodImgWrap}>
-                    <div className="img-ph" style={{ width:'100%', height:200, borderRadius:0, border:'none' }}>
-                      <span>{p.name}</span><small>480×200px</small>
-                    </div>
+                    <img src={`/product-${i+1}.png`} alt={p.name} style={{ width:'100%', height:200, objectFit:'cover', display:'block' }} />
                     <div className={styles.prodOverlay} />
                   </div>
                   <div className={styles.prodBody}>
@@ -203,9 +202,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={`${styles.reachMap} fade-in d2`}>
-                <div className="img-ph" style={{ width:'100%', height:300, borderRadius:2 }}>
-                  <span>World Map Graphic</span><small>Export destinations highlighted</small>
-                </div>
+                <img src="/world-map.png" alt="Global Reach" style={{ width:'100%', height:300, objectFit:'cover', borderRadius:2, display:'block' }} />
               </div>
             </div>
           </div>
@@ -234,9 +231,7 @@ export default function Home() {
         {/* ── BANNER CTA ── */}
         <section className={styles.banner}>
           <div className={styles.bannerBg}>
-            <div className="img-ph" style={{ width:'100%', height:'100%', borderRadius:0, border:'none', background:'linear-gradient(135deg,#1e3f6a,#0b1d35)' }}>
-              <span>Banner Image</span><small>Shipping / cargo / global ports</small>
-            </div>
+            <img src="/banner.png" alt="Banner" style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
           </div>
           <div className={`${styles.bannerContent} fade-up`}>
             <span className="eyebrow light">Partner With Us</span>
