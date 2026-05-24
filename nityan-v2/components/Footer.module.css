@@ -1,0 +1,69 @@
+.footer { background: var(--navy); color: #fff; }
+
+.top { padding: 80px 48px 60px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.grid {
+  max-width: 1320px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.8fr 1fr 1.3fr 1.4fr; gap: 56px;
+}
+
+/* Brand col */
+.brand {}
+.logoWrap {
+  display: inline-block;
+  margin-bottom: 22px;
+}
+.logo { height: 80px; width: auto; max-width: 240px; display: block; }
+.tagline { font-size: .9rem; color: rgba(255,255,255,.55); line-height: 1.8; margin-bottom: 26px; }
+.divider { width: 44px; height: 2px; background: var(--gold); margin-bottom: 24px; }
+.contacts { display: flex; flex-direction: column; gap: 12px; }
+.contactRow {
+  display: flex; align-items: center; gap: 11px;
+  font-size: .875rem; color: rgba(255,255,255,.6);
+  transition: color .2s;
+}
+.contactRow:hover { color: var(--gold-light); }
+.contactRow svg { color: var(--gold); flex-shrink: 0; }
+
+/* Nav cols */
+.col h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: #fff; margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(200,135,10,.3);
+}
+.col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.col ul li a,
+.col ul li span {
+  font-size: .875rem; color: rgba(255,255,255,.52);
+  transition: color .2s; cursor: default; line-height: 1.5;
+}
+.col ul li a { cursor: pointer; }
+.col ul li a:hover { color: var(--gold-light); }
+
+/* Address col */
+.address { display: flex; flex-direction: column; gap: 16px; }
+.addrRow { display: flex; align-items: flex-start; gap: 11px; }
+.addrRow svg { color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+.addrRow p, .addrRow a {
+  font-size: .875rem; color: rgba(255,255,255,.52); line-height: 1.7;
+}
+.addrRow a:hover { color: var(--gold-light); }
+
+/* Bottom */
+.bottom { padding: 22px 48px; background: rgba(0,0,0,.2); }
+.bottomInner {
+  max-width: 1320px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: .8rem; color: rgba(255,255,255,.35);
+  flex-wrap: wrap; gap: 8px;
+}
+
+@media (max-width: 1100px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 44px; }
+}
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; gap: 36px; }
+  .top, .bottom { padding-left: 20px; padding-right: 20px; }
+  .bottomInner { flex-direction: column; text-align: center; }
+}

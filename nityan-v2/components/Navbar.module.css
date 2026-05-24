@@ -1,0 +1,112 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 96px; z-index: 1000;
+  background: rgba(11,29,53,0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: none;
+  transition: box-shadow .3s ease;
+}
+.scrolled {
+  background: rgba(11,29,53,1);
+  box-shadow: 0 4px 32px rgba(0,0,0,.4);
+}
+.inner {
+  max-width: 1320px; margin: 0 auto;
+  padding: 0 48px; height: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+/* Logo */
+.logo { display: flex; align-items: center; }
+.logoImg {
+  height: 76px; width: auto; max-width: 240px;
+  object-fit: contain; transition: opacity .2s, transform .3s ease;
+}
+.logoImg:hover { opacity: .85; transform: scale(1.04); }
+
+/* Links */
+.links {
+  display: flex; align-items: center; gap: 40px;
+  list-style: none; margin: 0; padding: 0;
+}
+
+/* Each link: clip container so slide-up works */
+.links li a {
+  font-size: .78rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  position: relative; overflow: hidden;
+  display: inline-flex; flex-direction: column;
+  height: 1.1em; /* one line tall */
+  transition: color .2s;
+  padding-bottom: 0;
+}
+
+/* Two spans stacked — default visible, hover slides up */
+.linkText, .linkHover {
+  display: block;
+  transition: transform .28s cubic-bezier(.4,0,.2,1), color .2s;
+  white-space: nowrap;
+}
+.linkText  { color: rgba(255,255,255,.75); transform: translateY(0); }
+.linkHover { color: var(--gold-light);     transform: translateY(0); position: absolute; top: 100%; left: 0; }
+
+.links li a:hover .linkText  { transform: translateY(-100%); }
+.links li a:hover .linkHover { transform: translateY(-100%); }
+
+/* Active state */
+.links li a.active .linkText  { color: #fff; }
+.links li a.active::after {
+  content: ''; position: absolute;
+  bottom: -6px; left: 0; right: 0;
+  height: 2px; background: var(--gold);
+  border-radius: 2px;
+}
+
+/* CTA Button */
+.cta {
+  background: var(--gold) !important;
+  color: #fff !important;
+  padding: 11px 24px !important;
+  border-radius: 2px !important;
+  font-weight: 700 !important; font-size: .76rem !important;
+  letter-spacing: .12em !important; text-transform: uppercase !important;
+  transition: background .2s, transform .18s, box-shadow .2s !important;
+  white-space: nowrap; overflow: visible !important;
+  height: auto !important; flex-direction: row !important;
+}
+.cta .linkText, .cta .linkHover { display: none; }
+.cta:hover {
+  background: var(--gold-light) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(200,135,10,.35) !important;
+}
+
+/* Burger */
+.burger { display: none; color: #fff; padding: 6px; }
+
+@media (max-width: 1020px) {
+  .burger { display: flex; }
+  .links {
+    position: fixed; top: 96px; left: 0; right: 0;
+    background: rgba(11,29,53,.99);
+    backdrop-filter: blur(16px);
+    flex-direction: column; align-items: flex-start;
+    gap: 0; padding: 12px 28px 28px;
+    transform: translateY(-110%); opacity: 0;
+    transition: transform .32s cubic-bezier(.4,0,.2,1), opacity .32s ease;
+    pointer-events: none;
+    border-top: 1px solid rgba(200,135,10,.2);
+    box-shadow: 0 20px 48px rgba(0,0,0,.4);
+  }
+  .open { transform: translateY(0) !important; opacity: 1 !important; pointer-events: all !important; }
+  .links li { width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .links li:last-child { border-bottom: none; padding-top: 18px; }
+  /* On mobile, reset the clip animation — just show text normally */
+  .links li a { height: auto; overflow: visible; flex-direction: row; }
+  .linkText  { transform: none !important; color: rgba(255,255,255,.75); position: static; }
+  .linkHover { display: none; }
+  .links li a:hover .linkText { transform: none !important; color: var(--gold-light); }
+  .inner { padding: 0 20px; }
+  .logoImg { height: 64px; }
+}
