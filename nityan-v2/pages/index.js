@@ -150,7 +150,7 @@ export default function Home() {
               {products.map((p, i) => (
                 <div className={`${styles.prodCard} fade-up d${(i % 3) + 1}`} key={i}>
                   <div className={styles.prodImgWrap}>
-                    <img src={`/product-${i+1}.png`} alt={p.name} style={{ width:'100%', height:200, objectFit:'cover', display:'block' }} />
+                    <img src={`/product${i+1}.png`} alt={p.name} style={{ width:'100%', height:200, objectFit:'cover', display:'block' }} />
                     <div className={styles.prodOverlay} />
                   </div>
                   <div className={styles.prodBody}>
