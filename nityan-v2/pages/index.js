@@ -54,9 +54,7 @@ export default function Home() {
         {/* ── HERO ── */}
         <section className={styles.hero}>
           <div className={styles.heroBg}>
-            <div className="img-ph" style={{ width:'100%', height:'100%', borderRadius:0, border:'none', background:'linear-gradient(135deg,#2a4a6e,#1a3050)' }}>
-              <span>Hero Image</span><small>1920×900px — Indian exports / global trade</small>
-            </div>
+            <img src="/hero.png" alt="Nityan Exports Hero" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center' }} />
             <div className={styles.heroOverlay} />
           </div>
           <div className={styles.heroContent}>
