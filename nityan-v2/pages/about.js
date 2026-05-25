@@ -4,17 +4,17 @@ import { ArrowRight, CheckCircle, Target, Eye, Heart } from 'lucide-react';
 import styles from '../styles/About.module.css';
 
 const milestones = [
-  { year:'2015', title:'Company Founded',         desc:'Nityan Exports Pvt Ltd was established in Gurugram by Pawan Tripathi with a vision to connect Indian produce with global buyers.' },
-  { year:'2017', title:'First International Export', desc:'Successfully completed first international shipment of dehydrated spice powders to Middle Eastern markets.' },
-  { year:'2019', title:'Expanded Product Range',  desc:'Launched leather goods and handicraft export verticals, partnering with artisan communities across India.' },
-  { year:'2021', title:'Bio Fertilizer Manufacturing', desc:'Added in-house manufacturing of Bio Fertilizer and Vermicompost, expanding into sustainable agriculture products.' },
-  { year:'2023', title:'Global Growth',            desc:'Serving buyers across 20+ countries with established direct sourcing networks with Indian manufacturers and farmers.' },
+  { year: '2015', title: 'Company Founded', desc: 'Nityan Exports Pvt Ltd was established in Gurugram by Pawan Tripathi with a vision to connect Indian produce with global buyers.' },
+  { year: '2017', title: 'First International Export', desc: 'Successfully completed first international shipment of dehydrated spice powders to Middle Eastern markets.' },
+  { year: '2019', title: 'Expanded Product Range', desc: 'Launched leather goods and handicraft export verticals, partnering with artisan communities across India.' },
+  { year: '2021', title: 'Bio Fertilizer Manufacturing', desc: 'Added in-house manufacturing of Bio Fertilizer and Vermicompost, expanding into sustainable agriculture products.' },
+  { year: '2023', title: 'Global Growth', desc: 'Serving buyers across 20+ countries with established direct sourcing networks with Indian manufacturers and farmers.' },
 ];
 
 const values = [
-  { icon:<Target size={26}/>, title:'Our Mission', desc:'To be the most trusted Indian export partner — connecting quality Indian products to global markets with transparency and reliability.' },
-  { icon:<Eye size={26}/>,    title:'Our Vision',  desc:'A world where Indian quality is recognised as the global benchmark — powered by ethical trade and genuine partnerships.' },
-  { icon:<Heart size={26}/>,  title:'Our Values',  desc:'Integrity in every deal. Respect for every farmer, artisan, and buyer. Commitment to quality at every step of the supply chain.' },
+  { icon: <Target size={26} />, title: 'Our Mission', desc: 'To be the most trusted Indian export partner — connecting quality Indian products to global markets with transparency and reliability.' },
+  { icon: <Eye size={26} />, title: 'Our Vision', desc: 'A world where Indian quality is recognised as the global benchmark — powered by ethical trade and genuine partnerships.' },
+  { icon: <Heart size={26} />, title: 'Our Values', desc: 'Integrity in every deal. Respect for every farmer, artisan, and buyer. Commitment to quality at every step of the supply chain.' },
 ];
 
 export default function About() {
@@ -25,7 +25,7 @@ export default function About() {
 
         {/* Hero */}
         <section className={styles.pageHero}>
-         <img src="/about-banner.png" alt="About Nityan Exports" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+          <img src="/about-banner.png" alt="About Nityan Exports" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="eyebrow light fade-up d1">About Us</span>
@@ -43,18 +43,14 @@ export default function About() {
               <p className={`${styles.body} fade-up d3`}>Nityan Exports Pvt Ltd was founded with a singular vision — to bring the richness of India's agricultural heritage and artisanal craftsmanship to global markets. Headquartered in Gurugram, Haryana, we operate at the intersection of quality sourcing and international trade.</p>
               <p className={`${styles.body} fade-up d3`}>Led by <strong>Pawan Tripathi</strong>, Founder &amp; CEO, our company has grown from a focused agricultural exporter to a multi-category trade partner serving buyers across Asia, Europe, the Middle East, and beyond.</p>
               <ul className={`${styles.checks} fade-up d4`}>
-                {['Direct Manufacturer Sourcing','End-to-End Logistics','Quality Assurance at Every Stage','Transparent Documentation & Compliance'].map(c => (
+                {['Direct Manufacturer Sourcing', 'End-to-End Logistics', 'Quality Assurance at Every Stage', 'Transparent Documentation & Compliance'].map(c => (
                   <li key={c}><CheckCircle size={17} /><span>{c}</span></li>
                 ))}
               </ul>
             </div>
             <div className={`${styles.storyImgs} fade-in d2`}>
-              <div className="img-ph" style={{ width:'100%', height:400 }}>
-                <span>Founder / Office</span><small>560×400px</small>
-              </div>
-              <div className="img-ph" style={{ width:'100%', height:220, marginTop:16 }}>
-                <span>Warehouse / Products</span><small>560×220px</small>
-              </div>
+              <img src="/about-story.png" alt="Our Story" style={{ width: '100%', height: 400, objectFit: 'cover', display: 'block', borderRadius: 2 }} />
+              <img src="/about-warehouse.png" alt="Warehouse" style={{ width: '100%', height: 220, objectFit: 'cover', display: 'block', borderRadius: 2, marginTop: 16 }} />
             </div>
           </div>
         </section>
@@ -110,7 +106,7 @@ export default function About() {
             </div>
             <div className={`${styles.leaderCard} fade-up d2`}>
               <div className={styles.leaderPhoto}>
-                <div className="img-ph" style={{ width:'100%', height:'100%', minHeight:400, borderRadius:0 }}>
+                <div className="img-ph" style={{ width: '100%', height: '100%', minHeight: 400, borderRadius: 0 }}>
                   <span>Pawan Tripathi</span><small>400×440px — professional portrait</small>
                 </div>
               </div>
