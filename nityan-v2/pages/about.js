@@ -106,9 +106,7 @@ export default function About() {
             </div>
             <div className={`${styles.leaderCard} fade-up d2`}>
               <div className={styles.leaderPhoto}>
-                <div className="img-ph" style={{ width: '100%', height: '100%', minHeight: 400, borderRadius: 0 }}>
-                  <span>Pawan Tripathi</span><small>400×440px — professional portrait</small>
-                </div>
+        <img src="/pawan.jpeg" alt="Pawan Tripathi" style={{ width:'100%', height:'100%', minHeight:400, objectFit:'cover', display:'block' }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Pawan Tripathi</h3>
