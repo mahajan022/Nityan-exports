@@ -89,8 +89,8 @@
 /* CTA */
 .cta { padding:90px 48px; background:var(--cream); }
 .ctaInner { max-width:680px; margin:0 auto; text-align:center; }
-.ctaInner h2 { font-size:2.4rem; color:var(--navy); margin-bottom:14px; }
-.ctaInner p { font-size:.95rem; color:var(--gray-text); line-height:1.8; margin-bottom:32px; }
+.ctaInner h2 { font-size:2.4rem; color:#fff; margin-bottom:14px; }
+.ctaInner p { font-size:.95rem; color:rgba(255,255,255,.8); line-height:1.8; margin-bottom:32px; }
 
 /* RESPONSIVE */
 @media (max-width:900px) {
