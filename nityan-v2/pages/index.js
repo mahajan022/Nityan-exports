@@ -22,10 +22,10 @@ const products = [
 ];
 
 const why = [
-  { icon: <Globe size={24} />,      title: 'Global Network',      desc: 'Established trade relationships across Asia, Europe, the Middle East, and beyond.' },
-  { icon: <Shield size={24} />,     title: 'Quality Assured',     desc: 'Strict quality checks at every stage — from source to shipment destination.' },
-  { icon: <TrendingUp size={24} />, title: 'Competitive Pricing', desc: 'Direct sourcing from Indian manufacturers ensures best-in-class pricing.' },
-  { icon: <Award size={24} />,      title: 'Trusted Brand',       desc: 'Built on integrity and transparency — a partner you can count on.' },
+  { icon: <img src="/icon-globe.png" alt="Global Network" style={{width:48,height:48}} />,      title: 'Global Network',      desc: 'Established trade relationships across Asia, Europe, the Middle East, and beyond.' },
+  { icon: <img src="/icon-shield.png" alt="Quality Assured" style={{width:48,height:48}} />,     title: 'Quality Assured',     desc: 'Strict quality checks at every stage — from source to shipment destination.' },
+  { icon: <img src="/icon-graph.png" alt="Competitive Pricing" style={{width:48,height:48}} />,  title: 'Competitive Pricing', desc: 'Direct sourcing from Indian manufacturers ensures best-in-class pricing.' },
+  { icon: <img src="/icon-medal.png" alt="Trusted Brand" style={{width:48,height:48}} />,        title: 'Trusted Brand',       desc: 'Built on integrity and transparency — a partner you can count on.' },
 ];
 
 const process = [
