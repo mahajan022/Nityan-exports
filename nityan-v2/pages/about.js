@@ -123,7 +123,7 @@ export default function About() {
         </section>
 
         {/* CTA */}
-        <section className={styles.cta} style={{ backgroundImage:"url('/about-cta.png')", backgroundSize:'cover', backgroundPosition:'center' }}>
+       <section className={styles.cta} style={{ backgroundImage:"linear-gradient(rgba(11,29,53,0.75),rgba(11,29,53,0.75)), url('/about-cta.png')", backgroundSize:'cover', backgroundPosition:'center' }}>
           <div className={`${styles.ctaInner} fade-up`}>
             <h2>Partner With Us</h2>
             <p>Looking for a reliable Indian export partner? Let's talk about how Nityan Exports can serve your sourcing needs.</p>
