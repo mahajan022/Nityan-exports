@@ -4,21 +4,21 @@ import { ArrowRight, Search, Package, FileText, Truck, Headphones, BarChart2 } f
 import styles from '../styles/Services.module.css';
 
 const services = [
-  { icon:<Search size={30}/>,     title:'Product Sourcing',      sub:'Direct from Indian Manufacturers',  desc:'We identify, vet, and source the exact products you need from trusted Indian manufacturers and farmer cooperatives.', pts:['Manufacturer verification','Sample procurement','Price negotiation','Quality benchmarking'] },
-  { icon:<Package size={30}/>,    title:'Packaging & Labelling', sub:'Market-Ready Presentation',         desc:'We arrange custom packaging and labelling as per your destination market requirements — food-grade, retail, or bulk.', pts:['Custom retail packaging','Bulk industrial packaging','Country-specific labelling','Food-safe materials'] },
-  { icon:<FileText size={30}/>,   title:'Export Documentation',  sub:'Hassle-Free Compliance',            desc:'We handle all export paperwork — from Certificate of Origin to Phytosanitary Certificates — ensuring smooth clearance.', pts:['Certificate of Origin','Phytosanitary Certificates','Quality Inspection Reports','Commercial Invoices & Packing Lists'] },
-  { icon:<Truck size={30}/>,      title:'Logistics & Shipping',  sub:'End-to-End Freight Management',    desc:'We coordinate freight forwarders, shipping lines, and customs brokers to ensure timely and safe delivery.', pts:['FCL & LCL shipping','Air freight for perishables','Cold-chain logistics','Real-time shipment tracking'] },
-  { icon:<Headphones size={30}/>, title:'Buyer Consultation',    sub:'Expert Trade Advisory',             desc:'New to importing from India? Our team provides end-to-end consultation on regulations, MOQ, payment terms, and more.', pts:['Import regulation guidance','MOQ & pricing consultation','Payment terms advisory','Market entry support'] },
-  { icon:<BarChart2 size={30}/>,  title:'Quality Assurance',     sub:'Consistent Standards You Can Trust',desc:'We implement a rigorous multi-stage quality control process — from raw material inspection to final pre-shipment checks.', pts:['Pre-shipment inspection','Third-party lab testing','Specification compliance','Defect reporting & resolution'] },
+  { icon: <Search size={30} />, title: 'Product Sourcing', sub: 'Direct from Indian Manufacturers', desc: 'We identify, vet, and source the exact products you need from trusted Indian manufacturers and farmer cooperatives.', pts: ['Manufacturer verification', 'Sample procurement', 'Price negotiation', 'Quality benchmarking'] },
+  { icon: <Package size={30} />, title: 'Packaging & Labelling', sub: 'Market-Ready Presentation', desc: 'We arrange custom packaging and labelling as per your destination market requirements — food-grade, retail, or bulk.', pts: ['Custom retail packaging', 'Bulk industrial packaging', 'Country-specific labelling', 'Food-safe materials'] },
+  { icon: <FileText size={30} />, title: 'Export Documentation', sub: 'Hassle-Free Compliance', desc: 'We handle all export paperwork — from Certificate of Origin to Phytosanitary Certificates — ensuring smooth clearance.', pts: ['Certificate of Origin', 'Phytosanitary Certificates', 'Quality Inspection Reports', 'Commercial Invoices & Packing Lists'] },
+  { icon: <Truck size={30} />, title: 'Logistics & Shipping', sub: 'End-to-End Freight Management', desc: 'We coordinate freight forwarders, shipping lines, and customs brokers to ensure timely and safe delivery.', pts: ['FCL & LCL shipping', 'Air freight for perishables', 'Cold-chain logistics', 'Real-time shipment tracking'] },
+  { icon: <Headphones size={30} />, title: 'Buyer Consultation', sub: 'Expert Trade Advisory', desc: 'New to importing from India? Our team provides end-to-end consultation on regulations, MOQ, payment terms, and more.', pts: ['Import regulation guidance', 'MOQ & pricing consultation', 'Payment terms advisory', 'Market entry support'] },
+  { icon: <BarChart2 size={30} />, title: 'Quality Assurance', sub: 'Consistent Standards You Can Trust', desc: 'We implement a rigorous multi-stage quality control process — from raw material inspection to final pre-shipment checks.', pts: ['Pre-shipment inspection', 'Third-party lab testing', 'Specification compliance', 'Defect reporting & resolution'] },
 ];
 
 const steps = [
-  { n:'01', t:'Enquiry',          d:'You send us your product requirement, quantity, and destination.' },
-  { n:'02', t:'Sourcing',         d:'We identify the best Indian manufacturer or supplier for your requirement.' },
-  { n:'03', t:'Sample',           d:'A product sample is prepared and dispatched for your approval.' },
-  { n:'04', t:'Order Confirmed',  d:'Once the sample is approved, we confirm pricing, packaging, and timeline.' },
-  { n:'05', t:'Production & QC',  d:'Your order is processed with quality checks at every stage.' },
-  { n:'06', t:'Shipment',         d:'We handle all documentation, logistics, and shipping to your destination.' },
+  { n: '01', t: 'Enquiry', d: 'You send us your product requirement, quantity, and destination.' },
+  { n: '02', t: 'Sourcing', d: 'We identify the best Indian manufacturer or supplier for your requirement.' },
+  { n: '03', t: 'Sample', d: 'A product sample is prepared and dispatched for your approval.' },
+  { n: '04', t: 'Order Confirmed', d: 'Once the sample is approved, we confirm pricing, packaging, and timeline.' },
+  { n: '05', t: 'Production & QC', d: 'Your order is processed with quality checks at every stage.' },
+  { n: '06', t: 'Shipment', d: 'We handle all documentation, logistics, and shipping to your destination.' },
 ];
 
 export default function Services() {
@@ -29,9 +29,7 @@ export default function Services() {
 
         {/* Hero */}
         <section className={styles.pageHero}>
-          <div className="img-ph" style={{ position:'absolute', inset:0, borderRadius:0, border:'none', background:'linear-gradient(135deg,#8fafc4,#6a8ea8)' }}>
-            <span>Services Banner</span><small>1920×500px — logistics / trade / shipping</small>
-          </div>
+          <img src="/services-banner.png" alt="Services Banner" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <span className="eyebrow light fade-up d1">What We Do</span>
@@ -50,9 +48,7 @@ export default function Services() {
               <p className={`${styles.body} fade-up d3`}>Our services span the entire export value chain — from product sourcing and quality control to packaging, documentation, and international logistics.</p>
             </div>
             <div className={`${styles.introImg} fade-in d2`}>
-              <div className="img-ph" style={{ width:'100%', height:380 }}>
-                <span>Services Overview</span><small>600×380px — warehouse / operations</small>
-              </div>
+              <img src="/services-overview.png" alt="Services Overview" style={{ width: '100%', height: 380, objectFit: 'cover', borderRadius: 2, display: 'block' }} />
             </div>
           </div>
         </section>
@@ -72,7 +68,7 @@ export default function Services() {
                   <span className={styles.svcSub}>{s.sub}</span>
                   <p>{s.desc}</p>
                   <ul className={styles.pts}>
-                    {s.pts.map(pt => <li key={pt}><span className={styles.bullet}/>{pt}</li>)}
+                    {s.pts.map(pt => <li key={pt}><span className={styles.bullet} />{pt}</li>)}
                   </ul>
                 </div>
               ))}
@@ -104,7 +100,7 @@ export default function Services() {
         <section className={styles.cta}>
           <div className={styles.ctaInner}>
             <div className={`${styles.ctaImg} fade-in d1`}>
-              <img src="/cta-products.png" alt="Export" style={{ width:'100%', height:340, objectFit:'cover', borderRadius:2, display:'block' }} />
+              <img src="/cta-products.png" alt="Export" style={{ width: '100%', height: 340, objectFit: 'cover', borderRadius: 2, display: 'block' }} />
             </div>
             <div className={styles.ctaText}>
               <span className="eyebrow fade-up d1">Get Started</span>
