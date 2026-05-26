@@ -59,7 +59,7 @@ export default function Contact() {
               {/* Person card — photo + details unified */}
               <div className={`${styles.person} fade-up d4`}>
                 <div className={styles.personPhoto}>
-                  <img src="/pawan.png" alt="Pawan Tripathi" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  <img src="/pawanji.png" alt="Pawan Tripathi" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
                 <div className={styles.personDetails}>
                   <strong>Pawan Tripathi</strong>
