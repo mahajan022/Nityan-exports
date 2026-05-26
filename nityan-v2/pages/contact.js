@@ -4,16 +4,16 @@ import { Phone, Mail, MapPin, Globe, Clock, Send } from 'lucide-react';
 import styles from '../styles/Contact.module.css';
 
 const info = [
-  { icon:<Phone size={18}/>,  label:'Phone',          content:<a href="tel:+919118985119">+91-9118985119</a> },
-  { icon:<Mail size={18}/>,   label:'Email',          content:<><a href="mailto:pawan@nityanexports.com">pawan@nityanexports.com</a><a href="mailto:Pawantripathi45@gmail.com" style={{fontSize:'.8rem',opacity:.7}}>Pawantripathi45@gmail.com</a></> },
-  { icon:<Globe size={18}/>,  label:'Website',        content:<a href="http://www.nityanexports.com" target="_blank" rel="noreferrer">www.nityanexports.com</a> },
-  { icon:<MapPin size={18}/>, label:'Address',        content:<span>1201, Tower A7, Signature Global Solera,<br/>Sector 107, Gurugram,<br/>Haryana – 122006, India</span> },
-  { icon:<Clock size={18}/>,  label:'Business Hours', content:<span>Monday – Saturday: 9:00 AM – 6:00 PM IST</span> },
+  { icon: <Phone size={18} />, label: 'Phone', content: <a href="tel:+919118985119">+91-9118985119</a> },
+  { icon: <Mail size={18} />, label: 'Email', content: <><a href="mailto:pawan@nityanexports.com">pawan@nityanexports.com</a><a href="mailto:Pawantripathi45@gmail.com" style={{ fontSize: '.8rem', opacity: .7 }}>Pawantripathi45@gmail.com</a></> },
+  { icon: <Globe size={18} />, label: 'Website', content: <a href="http://www.nityanexports.com" target="_blank" rel="noreferrer">www.nityanexports.com</a> },
+  { icon: <MapPin size={18} />, label: 'Address', content: <span>1201, Tower A7, Signature Global Solera,<br />Sector 107, Gurugram,<br />Haryana – 122006, India</span> },
+  { icon: <Clock size={18} />, label: 'Business Hours', content: <span>Monday – Saturday: 9:00 AM – 6:00 PM IST</span> },
 ];
 
 export default function Contact() {
-  const [form, setForm]   = useState({ name:'', company:'', email:'', phone:'', product:'', message:'' });
-  const [sent, setSent]   = useState(false);
+  const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', product: '', message: '' });
+  const [sent, setSent] = useState(false);
 
   const handle = e => setForm({ ...form, [e.target.name]: e.target.value });
   const submit = e => { e.preventDefault(); setSent(true); };
@@ -23,16 +23,16 @@ export default function Contact() {
       <Head><title>Contact Us | Nityan Exports Pvt Ltd</title></Head>
       <div className="page-top">
 
- {/* Hero */}
-<section className={styles.pageHero}>
-  <img src="/contact-banner.png" alt="Contact Banner" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
-  <div className={styles.heroOverlay} />
-  <div className={styles.heroContent}>
-    <span className="eyebrow light fade-up d1">Get In Touch</span>
-    <h1 className="fade-up d2">Contact Nityan Exports</h1>
-    <p className="fade-up d3">Reach out to discuss your sourcing needs, request a sample, or get a quote.</p>
-  </div>
-</section>
+        {/* Hero */}
+        <section className={styles.pageHero}>
+          <img src="/contact-banner.png" alt="Contact Banner" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <div className={styles.heroOverlay} />
+          <div className={styles.heroContent}>
+            <span className="eyebrow light fade-up d1">Get In Touch</span>
+            <h1 className="fade-up d2">Contact Nityan Exports</h1>
+            <p className="fade-up d3">Reach out to discuss your sourcing needs, request a sample, or get a quote.</p>
+          </div>
+        </section>
 
         {/* Main */}
         <section className={styles.main}>
@@ -56,13 +56,12 @@ export default function Contact() {
                 ))}
               </div>
 
+              {/* Person card — photo + details unified */}
               <div className={`${styles.person} fade-up d4`}>
                 <div className={styles.personPhoto}>
-                  <div className="img-ph" style={{ width:'100%', height:'100%', minHeight:80, borderRadius:4, border:'none' }}>
-                    <span style={{fontSize:'.7rem'}}>Photo</span>
-                  </div>
+                  <img src="/pawan.png" alt="Pawan Tripathi" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                 </div>
-                <div>
+                <div className={styles.personDetails}>
                   <strong>Pawan Tripathi</strong>
                   <span>Founder &amp; CEO</span>
                   <p>Direct inquiries are always welcome.</p>
@@ -136,7 +135,7 @@ export default function Contact() {
 
         {/* Map */}
         <section className={styles.map}>
-          <div className="img-ph" style={{ width:'100%', height:'100%', borderRadius:0, border:'none', background:'linear-gradient(135deg,#c8d8e4,#a8c0d0)' }}>
+          <div className="img-ph" style={{ width: '100%', height: '100%', borderRadius: 0, border: 'none', background: 'linear-gradient(135deg,#c8d8e4,#a8c0d0)' }}>
             <span>Google Maps Embed</span>
             <small>Embed: Signature Global Solera, Sector 107, Gurugram</small>
           </div>
@@ -144,7 +143,7 @@ export default function Contact() {
             <MapPin size={20} />
             <div>
               <strong>Nityan Exports Pvt Ltd</strong>
-              <span>1201, Tower A7, Signature Global Solera,<br/>Sector 107, Gurugram – 122006</span>
+              <span>1201, Tower A7, Signature Global Solera,<br />Sector 107, Gurugram – 122006</span>
             </div>
           </div>
         </section>
