@@ -12,11 +12,10 @@ const milestones = [
 ];
 
 const values = [
-  { icon: <Target size={26} />, title: 'Our Mission', desc: 'To be the most trusted Indian export partner — connecting quality Indian products to global markets with transparency and reliability.' },
-  { icon: <Eye size={26} />, title: 'Our Vision', desc: 'A world where Indian quality is recognised as the global benchmark — powered by ethical trade and genuine partnerships.' },
-  { icon: <Heart size={26} />, title: 'Our Values', desc: 'Integrity in every deal. Respect for every farmer, artisan, and buyer. Commitment to quality at every step of the supply chain.' },
+  { icon:<img src="/icon-mission.png" alt="Mission" style={{width:48,height:48}} />, title:'Our Mission', desc:'To be the most trusted Indian export partner — connecting quality Indian products to global markets with transparency and reliability.' },
+  { icon:<img src="/icon-vision.png" alt="Vision" style={{width:48,height:48}} />,   title:'Our Vision',  desc:'A world where Indian quality is recognised as the global benchmark — powered by ethical trade and genuine partnerships.' },
+  { icon:<img src="/icon-values.png" alt="Values" style={{width:48,height:48}} />,   title:'Our Values',  desc:'Integrity in every deal. Respect for every farmer, artisan, and buyer. Commitment to quality at every step of the supply chain.' },
 ];
-
 export default function About() {
   return (
     <>
