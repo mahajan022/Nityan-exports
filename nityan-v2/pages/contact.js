@@ -136,7 +136,7 @@ export default function Contact() {
         {/* Map */}
         <section className={styles.map}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.2!2d76.9897!3d28.3974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d2a5b5b5b5b%3A0x5b5b5b5b5b5b5b5b!2sSignature%20Global%20Solera%2C%20Sector%20107%2C%20Gurugram%2C%20Haryana%20122006!5e0!3m2!1sen!2sin!4v1"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.9431222487694!2d76.97191648861975!3d28.51307004393258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1178ef8028e7%3A0xc5ea44116c327c2f!2sSignature%20Global%20Solera%20Apartment%20Sector-107%20Gurugram!5e0!3m2!1sen!2sin!4v1779785944579!5m2!1sen!2sin"
             width="100%"
             height="380"
             style={{ border: 0, display: 'block' }}
