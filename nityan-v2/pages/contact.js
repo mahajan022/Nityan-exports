@@ -23,18 +23,16 @@ export default function Contact() {
       <Head><title>Contact Us | Nityan Exports Pvt Ltd</title></Head>
       <div className="page-top">
 
-        {/* Hero */}
-        <section className={styles.pageHero}>
-          <div className="img-ph" style={{ position:'absolute', inset:0, borderRadius:0, border:'none', background:'linear-gradient(135deg,#8fafc4,#6a8ea8)' }}>
-            <span>Contact Banner</span><small>1920×500px — office / communication</small>
-          </div>
-          <div className={styles.heroOverlay} />
-          <div className={styles.heroContent}>
-            <span className="eyebrow light fade-up d1">Get in Touch</span>
-            <h1 className="fade-up d2">Contact Nityan Exports</h1>
-            <p className="fade-up d3">Reach out to discuss your sourcing needs, request a sample, or get a quote.</p>
-          </div>
-        </section>
+ {/* Hero */}
+<section className={styles.pageHero}>
+  <img src="/contact-banner.png" alt="Contact Banner" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+  <div className={styles.heroOverlay} />
+  <div className={styles.heroContent}>
+    <span className="eyebrow light fade-up d1">Get In Touch</span>
+    <h1 className="fade-up d2">Contact Nityan Exports</h1>
+    <p className="fade-up d3">Reach out to discuss your sourcing needs, request a sample, or get a quote.</p>
+  </div>
+</section>
 
         {/* Main */}
         <section className={styles.main}>
