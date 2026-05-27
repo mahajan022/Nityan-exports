@@ -139,7 +139,7 @@ export default function Home() {
         {/* PRODUCTS */}
         <section className={styles.products}>
           <div className={styles.productsInner}>
-            <div className={`${styles.secHeader} fade-up`}>
+            <div className={styles.secHeader}>
               <span className="eyebrow">What We Export</span>
               <h2 className={`${styles.sectionTitle} sec-title`}>Our Product Range</h2>
               <p className={styles.subtitle}>From organic farm produce to handcrafted goods — we export the best of India.</p>
@@ -168,7 +168,7 @@ export default function Home() {
         {/* WHY US */}
         <section className={styles.why}>
           <div className={styles.whyInner}>
-            <div className={`${styles.secHeader} fade-up`}>
+            <div className={styles.secHeader}>
               <span className="eyebrow light">Why Choose Us</span>
               <h2 className={`${styles.sectionTitle} sec-title-white`}>The Nityan Advantage</h2>
             </div>
@@ -187,9 +187,9 @@ export default function Home() {
         {/* REACH */}
         <section className={styles.reach}>
           <div className={styles.reachInner}>
-            <div className={`${styles.secHeader} fade-up`}>
+            <div className={styles.secHeader}>
               <span className="eyebrow">Our Global Presence</span>
-              <h2 className="sec-title fade-up">Serving Buyers Across the Globe</h2>
+              <h2 className="sec-title">Serving Buyers Across the Globe</h2>
             </div>
             <div className={styles.reachGrid}>
               <div className={`${styles.reachText} fade-up d1`}>
@@ -221,10 +221,10 @@ export default function Home() {
         {/* PROCESS */}
         <section className={styles.process}>
           <div className={styles.processInner}>
-            <div className={`${styles.secHeader} fade-up`}>
+            <div className={styles.secHeader}>
               <span className="eyebrow">How It Works</span>
-              <h2 className="sec-title fade-up">Simple 4-Step Export Process</h2>
-              <p className={`${styles.subtitle} fade-up`}>From enquiry to delivery — we handle everything.</p>
+              <h2 className="sec-title">Simple 4-Step Export Process</h2>
+              <p className={styles.subtitle}>From enquiry to delivery — we handle everything.</p>
             </div>
             <div className={styles.processSteps}>
               {process.map((s, i) => (
