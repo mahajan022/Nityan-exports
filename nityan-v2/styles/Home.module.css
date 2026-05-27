@@ -19,7 +19,7 @@
 }
 @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
 
-/* TICKER — scrolling product bar */
+/* TICKER */
 .ticker { background:var(--navy); overflow:hidden; padding:0; height:40px; display:flex; align-items:center; }
 .tickerTrack {
   display:flex; gap:0; white-space:nowrap;
@@ -64,6 +64,7 @@
 .accentBadge span { font-size:.75rem; opacity:.8; }
 .aboutText {}
 .sectionTitle { font-size:clamp(1.9rem,3vw,2.6rem); font-weight:700; color:var(--navy); line-height:1.18; margin-bottom:18px; }
+.sectionTitleWhite { font-size:clamp(1.9rem,3vw,2.6rem); font-weight:700; color:#fff; line-height:1.18; margin-bottom:18px; }
 .body { font-size:.95rem; color:var(--gray-text); line-height:1.85; margin-bottom:14px; }
 .pillars { list-style:none; padding:0; margin:24px 0 36px; display:flex; flex-direction:column; gap:14px; }
 .pillars li { display:flex; align-items:center; gap:14px; font-size:.9rem; color:var(--text-dark); font-weight:600; }
@@ -115,6 +116,10 @@
 }
 .whyCard h3 { font-size:1.1rem; color:#fff; margin-bottom:10px; }
 .whyCard p { font-size:.875rem; color:rgba(255,255,255,.48); line-height:1.75; }
+
+/* WHY section header text — force white on dark background */
+.whyInner .secHeader span { color:var(--gold); }
+.whyInner .secHeader h2 { color:#fff !important; }
 
 /* WORLD MAP / REACH */
 .reach { padding:100px 48px; background:var(--cream-dark); }
