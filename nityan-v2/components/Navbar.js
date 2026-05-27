@@ -12,9 +12,9 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const { pathname }            = useRouter();
+  const [scrolled, setScrolled]   = useState(false);
+  const [menuOpen, setMenuOpen]   = useState(false);
+  const { pathname }              = useRouter();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 30);
@@ -35,9 +35,11 @@ export default function Navbar() {
         <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
           {links.map(({ href, label }) => (
             <li key={href}>
-              <Link href={href} className={pathname === href ? styles.active : ''}>
-                <span className={styles.linkText}>{label}</span>
-                <span className={styles.linkHover}>{label}</span>
+              <Link
+                href={href}
+                className={pathname === href ? styles.active : ''}
+              >
+                {label}
               </Link>
             </li>
           ))}
@@ -46,9 +48,14 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <button className={styles.burger} onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
+        <button
+          className={styles.burger}
+          onClick={() => setMenuOpen(o => !o)}
+          aria-label="Menu"
+        >
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
+
       </div>
     </nav>
   );

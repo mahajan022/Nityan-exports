@@ -4,7 +4,6 @@
   background: rgba(11,29,53,0.97);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: none;
   transition: box-shadow .3s ease;
 }
 .scrolled {
@@ -31,37 +30,32 @@
   list-style: none; margin: 0; padding: 0;
 }
 
-/* Each link: clip container so slide-up works */
 .links li a {
   font-size: .78rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase;
-  position: relative; overflow: hidden;
-  display: inline-flex; flex-direction: column;
-  height: 1.1em; /* one line tall */
-  transition: color .2s;
-  padding-bottom: 0;
+  color: rgba(255,255,255,.72);
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color .2s ease;
 }
 
-/* Two spans stacked — default visible, hover slides up */
-.linkText, .linkHover {
-  display: block;
-  transition: transform .28s cubic-bezier(.4,0,.2,1), color .2s;
-  white-space: nowrap;
-}
-.linkText  { color: rgba(255,255,255,.75); transform: translateY(0); }
-.linkHover { color: var(--gold-light);     transform: translateY(0); position: absolute; top: 100%; left: 0; }
-
-.links li a:hover .linkText  { transform: translateY(-100%); }
-.links li a:hover .linkHover { transform: translateY(-100%); }
-
-/* Active state */
-.links li a.active .linkText  { color: #fff; }
-.links li a.active::after {
-  content: ''; position: absolute;
-  bottom: -6px; left: 0; right: 0;
-  height: 2px; background: var(--gold);
+.links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  width: 0; height: 2px;
+  background: var(--gold);
   border-radius: 2px;
+  transition: width .25s ease, left .25s ease;
 }
+
+.links li a:hover { color: #fff; }
+.links li a:hover::after { width: 100%; left: 0; }
+
+.links li a.active { color: #fff; }
+.links li a.active::after { width: 100%; left: 0; }
 
 /* CTA Button */
 .cta {
@@ -72,18 +66,19 @@
   font-weight: 700 !important; font-size: .76rem !important;
   letter-spacing: .12em !important; text-transform: uppercase !important;
   transition: background .2s, transform .18s, box-shadow .2s !important;
-  white-space: nowrap; overflow: visible !important;
-  height: auto !important; flex-direction: row !important;
+  white-space: nowrap;
+  text-decoration: none !important;
 }
-.cta .linkText, .cta .linkHover { display: none; }
+.cta::after { display: none !important; }
 .cta:hover {
   background: var(--gold-light) !important;
   transform: translateY(-2px) !important;
   box-shadow: 0 8px 24px rgba(200,135,10,.35) !important;
+  color: #fff !important;
 }
 
 /* Burger */
-.burger { display: none; color: #fff; padding: 6px; }
+.burger { display: none; color: #fff; padding: 6px; background: none; border: none; cursor: pointer; }
 
 @media (max-width: 1020px) {
   .burger { display: flex; }
@@ -102,11 +97,9 @@
   .open { transform: translateY(0) !important; opacity: 1 !important; pointer-events: all !important; }
   .links li { width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
   .links li:last-child { border-bottom: none; padding-top: 18px; }
-  /* On mobile, reset the clip animation — just show text normally */
-  .links li a { height: auto; overflow: visible; flex-direction: row; }
-  .linkText  { transform: none !important; color: rgba(255,255,255,.75); position: static; }
-  .linkHover { display: none; }
-  .links li a:hover .linkText { transform: none !important; color: var(--gold-light); }
+  .links li a { padding-bottom: 0; }
+  .links li a::after { display: none; }
+  .links li a:hover { color: var(--gold-light); }
   .inner { padding: 0 20px; }
   .logoImg { height: 64px; }
 }
