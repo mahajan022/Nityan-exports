@@ -27,6 +27,11 @@ export default function Products() {
 
   const filtered = active === 'All' ? products : products.filter(p => p.cat === active);
 
+  function handleFilter(cat) {
+    setExpand(null);
+    setActive(cat);
+  }
+
   return (
     <>
       <Head><title>Products | Nityan Exports Pvt Ltd</title></Head>
@@ -50,16 +55,16 @@ export default function Products() {
             {/* Filter */}
             <div className={`${styles.filters} fade-up`}>
               {cats.map(c => (
-                <button key={c} className={`${styles.filterBtn} ${active === c ? styles.filterActive : ''}`} onClick={() => setActive(c)}>
+                <button key={c} className={`${styles.filterBtn} ${active === c ? styles.filterActive : ''}`} onClick={() => handleFilter(c)}>
                   {c}
                 </button>
               ))}
             </div>
 
-            {/* Grid */}
-            <div className={styles.grid}>
+            {/* Grid — key on active forces full remount so fade-up re-fires */}
+            <div className={styles.grid} key={active}>
               {filtered.map((p, i) => (
-                <div className={`${styles.card} fade-up d${(i % 3) + 1}`} key={i}>
+                <div className={styles.card} key={p.name}>
                   <div style={{ position:'relative' }}>
                     <img src={p.img} alt={p.name} style={{ width:'100%', height:220, objectFit:'cover', borderRadius:'8px 8px 0 0', display:'block' }} />
                     <span className={styles.catTag}>{p.cat}</span>
@@ -67,9 +72,9 @@ export default function Products() {
                   <div className={styles.cardBody}>
                     <h3>{p.name}</h3>
                     <p className={styles.short}>{p.short}</p>
-                    {expanded === i && <p className={styles.long}>{p.desc}</p>}
-                    <button className={styles.toggle} onClick={() => setExpand(expanded === i ? null : i)}>
-                      {expanded === i ? 'Show Less ↑' : 'Learn More →'}
+                    {expanded === p.name && <p className={styles.long}>{p.desc}</p>}
+                    <button className={styles.toggle} onClick={() => setExpand(expanded === p.name ? null : p.name)}>
+                      {expanded === p.name ? 'Show Less ↑' : 'Learn More →'}
                     </button>
                   </div>
                 </div>

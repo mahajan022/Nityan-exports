@@ -4,11 +4,11 @@ import { ArrowRight, CheckCircle, Target, Eye, Heart } from 'lucide-react';
 import styles from '../styles/About.module.css';
 
 const milestones = [
-  { year: '2015', title: 'Company Founded', desc: 'Nityan Exports Pvt Ltd was established in Gurugram by Pawan Tripathi with a vision to connect Indian produce with global buyers.' },
-  { year: '2017', title: 'First International Export', desc: 'Successfully completed first international shipment of dehydrated spice powders to Middle Eastern markets.' },
-  { year: '2019', title: 'Expanded Product Range', desc: 'Launched leather goods and handicraft export verticals, partnering with artisan communities across India.' },
-  { year: '2021', title: 'Bio Fertilizer Manufacturing', desc: 'Added in-house manufacturing of Bio Fertilizer and Vermicompost, expanding into sustainable agriculture products.' },
-  { year: '2023', title: 'Global Growth', desc: 'Serving buyers across 20+ countries with established direct sourcing networks with Indian manufacturers and farmers.' },
+  { year: 'The Beginning',     title: 'Company Founded',           desc: 'Nityan Exports Pvt Ltd was established in Gurugram by Pawan Tripathi with a vision to connect Indian produce with global buyers.' },
+  { year: 'First Milestone',   title: 'First International Export', desc: 'Successfully completed first international shipment of dehydrated spice powders to international markets.' },
+  { year: 'Growing Portfolio', title: 'Expanded Product Range',    desc: 'Launched leather goods and handicraft export verticals, partnering with artisan communities across India.' },
+  { year: 'Manufacturing',     title: 'Bio Fertilizer Unit',       desc: 'Added in-house manufacturing of Bio Fertilizer and Vermicompost, expanding into sustainable agriculture products.' },
+  { year: 'Global Reach',      title: 'Serving Global Markets',    desc: 'Established direct sourcing networks with Indian manufacturers and farmers for buyers across multiple continents.' },
 ];
 
 const values = [
@@ -16,6 +16,7 @@ const values = [
   { icon:<img src="/icon-vision.png" alt="Vision" style={{width:48,height:48}} />,   title:'Our Vision',  desc:'A world where Indian quality is recognised as the global benchmark — powered by ethical trade and genuine partnerships.' },
   { icon:<img src="/icon-values.png" alt="Values" style={{width:48,height:48}} />,   title:'Our Values',  desc:'Integrity in every deal. Respect for every farmer, artisan, and buyer. Commitment to quality at every step of the supply chain.' },
 ];
+
 export default function About() {
   return (
     <>
@@ -105,7 +106,7 @@ export default function About() {
             </div>
             <div className={`${styles.leaderCard} fade-up d2`}>
               <div className={styles.leaderPhoto}>
-        <img src="/pawan.jpeg" alt="Pawan Tripathi" style={{ width:'100%', height:'100%', minHeight:400, objectFit:'cover', display:'block' }} />
+                <img src="/pawan.jpeg" alt="Pawan Tripathi" style={{ width:'100%', height:'100%', minHeight:400, objectFit:'cover', display:'block' }} />
               </div>
               <div className={styles.leaderInfo}>
                 <h3>Pawan Tripathi</h3>
@@ -122,7 +123,7 @@ export default function About() {
         </section>
 
         {/* CTA */}
-       <section className={styles.cta} style={{ backgroundImage:"linear-gradient(rgba(11,29,53,0.75),rgba(11,29,53,0.75)), url('/about-cta.png')", backgroundSize:'cover', backgroundPosition:'center' }}>
+        <section className={styles.cta} style={{ backgroundImage:"linear-gradient(rgba(11,29,53,0.75),rgba(11,29,53,0.75)), url('/about-cta.png')", backgroundSize:'cover', backgroundPosition:'center' }}>
           <div className={`${styles.ctaInner} fade-up`}>
             <h2>Partner With Us</h2>
             <p>Looking for a reliable Indian export partner? Let's talk about how Nityan Exports can serve your sourcing needs.</p>

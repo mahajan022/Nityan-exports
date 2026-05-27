@@ -9,7 +9,7 @@ const stats = [
   { n: '50+',  l: 'Export Products' },
   { n: '20+',  l: 'Countries Served' },
   { n: '100%', l: 'Quality Assured' },
-  { n: '10+',  l: 'Years Experience' },
+  { n: '12+',  l: 'Years Experience' },
 ];
 
 const products = [
@@ -35,7 +35,7 @@ const process = [
   { n: '04', t: 'Shipment', d: 'We handle all documentation, logistics and shipping to destination.' },
 ];
 
-const countries = ['UAE','USA','UK','Germany','Australia','Canada','Saudi Arabia','Netherlands','Singapore','France','Japan','Italy'];
+const countries = ['USA','Australia','New Zealand','UAE','Singapore','UK','Germany','South Africa'];
 
 const trust = [
   { icon: <Package size={18} />, label: 'FSSAI Compliant' },
@@ -208,7 +208,7 @@ export default function Home() {
                 <div style={{position:'absolute', inset:0, display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:10}}>
                   <div style={{background:'var(--gold)', color:'#fff', padding:'10px 24px', borderRadius:2, fontSize:'.9rem', fontWeight:700}}>🌍 20+ Countries Served</div>
                   <div style={{display:'flex', gap:8, flexWrap:'wrap', justifyContent:'center', padding:'0 20px'}}>
-                    {['UAE','USA','UK','Germany','Australia','Singapore','Saudi Arabia','France'].map(c => (
+                    {['USA','Australia','New Zealand','UAE','Singapore','UK','Germany','South Africa'].map(c => (
                       <span key={c} style={{background:'rgba(11,29,53,0.8)', color:'#fff', fontSize:'.7rem', padding:'3px 10px', borderRadius:20, fontWeight:600}}>{c}</span>
                     ))}
                   </div>
