@@ -17,7 +17,7 @@ const products = [
   { name: 'Spice & Herb Powders', cat: 'Spice Powders', desc: 'Dehydrated Onion, Ginger, Garlic, Amla & Banana Powder — hygienically processed.' },
   { name: 'Leather Goods',        cat: 'Craftsmanship', desc: 'Premium Indian leather craftsmanship meeting global quality and finishing standards.' },
   { name: 'Handicrafts & Copper', cat: 'Craftsmanship', desc: 'Authentic Indian artistry — copper utensils, décor, and handmade ethnic creations.' },
-  { name: 'Bio Fertilizer',       cat: 'Organic',       desc: 'Organic Bio Fertilizer and Vermicompost for sustainable agriculture worldwide.' },
+  { name: 'Organic Fertilizer',       cat: 'Organic',       desc: 'Organic Fertilizer for sustainable agriculture worldwide.' },
   { name: 'Hing (Asafoetida)',    cat: 'Spice Powders', desc: 'Pure, high-grade Hing sourced and exported with strict quality control.' },
 ];
 
