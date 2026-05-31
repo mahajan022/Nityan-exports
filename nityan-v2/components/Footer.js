@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, MessageCircle } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -18,11 +18,20 @@ export default function Footer() {
             </p>
             <div className={styles.divider} />
             <div className={styles.contacts}>
+              <a href="tel:+919311443912" className={styles.contactRow}>
+                <Phone size={14} /><span>+91-9311443912</span>
+              </a>
               <a href="tel:+919118985119" className={styles.contactRow}>
                 <Phone size={14} /><span>+91-9118985119</span>
               </a>
+              <a href="https://wa.me/919311443912" target="_blank" rel="noreferrer" className={styles.contactRow}>
+                <MessageCircle size={14} /><span>WhatsApp: +91-9311443912</span>
+              </a>
               <a href="mailto:pawan@nityanexports.com" className={styles.contactRow}>
                 <Mail size={14} /><span>pawan@nityanexports.com</span>
+              </a>
+              <a href="mailto:hello@nityanexports.com" className={styles.contactRow}>
+                <Mail size={14} /><span>hello@nityanexports.com</span>
               </a>
             </div>
           </div>
@@ -41,7 +50,7 @@ export default function Footer() {
           <div className={styles.col}>
             <h4>Export Products</h4>
             <ul>
-              {['Fruits & Vegetables', 'Dehydrated Onion Powder', 'Ginger & Garlic Powder', 'Amla & Banana Powder', 'Leather Goods', 'Handicraft & Copper Utensils', 'Bio Fertilizer & Vermicompost'].map(p => (
+              {['Fruits & Vegetables', 'Indian Pulses', 'Dehydrated Onion Powder', 'Ginger & Garlic Powder', 'Amla & Banana Powder', 'Leather Goods', 'Handicraft & Copper Utensils', 'Organic Fertilizer & Vermicompost'].map(p => (
                 <li key={p}><span>{p}</span></li>
               ))}
             </ul>

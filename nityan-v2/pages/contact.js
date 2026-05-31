@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Globe, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, Clock, Send, MessageCircle } from 'lucide-react';
 import styles from '../styles/Contact.module.css';
 
 const info = [
-  { icon: <Phone size={18} />, label: 'Phone', content: <a href="tel:+919118985119">+91-9118985119</a> },
-  { icon: <Mail size={18} />, label: 'Email', content: <><a href="mailto:pawan@nityanexports.com">pawan@nityanexports.com</a><a href="mailto:Pawantripathi45@gmail.com" style={{ fontSize: '.8rem', opacity: .7 }}>Pawantripathi45@gmail.com</a></> },
+  { icon: <Phone size={18} />, label: 'Phone', content: <><a href="tel:+919311443912">+91-9311443912</a><a href="tel:+919118985119">+91-9118985119</a></> },
+  { icon: <MessageCircle size={18} />, label: 'WhatsApp', content: <a href="https://wa.me/919311443912" target="_blank" rel="noreferrer">+91-9311443912</a> },
+  { icon: <Mail size={18} />, label: 'Email', content: <><a href="mailto:pawan@nityanexports.com">pawan@nityanexports.com</a><a href="mailto:hello@nityanexports.com">hello@nityanexports.com</a></> },
   { icon: <Globe size={18} />, label: 'Website', content: <a href="http://www.nityanexports.com" target="_blank" rel="noreferrer">www.nityanexports.com</a> },
   { icon: <MapPin size={18} />, label: 'Address', content: <span>1201, Tower A7, Signature Global Solera,<br />Sector 107, Gurugram,<br />Haryana – 122006, India</span> },
   { icon: <Clock size={18} />, label: 'Business Hours', content: <span>Monday – Saturday: 9:00 AM – 6:00 PM IST</span> },
@@ -108,12 +109,13 @@ export default function Contact() {
                       <select name="product" value={form.product} onChange={handle}>
                         <option value="">— Select a product category —</option>
                         <option>Fruits &amp; Vegetables</option>
+                        <option>Indian Pulses (Chickpeas, Lentils, Peas etc.)</option>
                         <option>Spice Powders (Onion, Ginger, Garlic etc.)</option>
                         <option>Amla / Banana Powder</option>
                         <option>Leather Goods</option>
                         <option>Handicrafts</option>
                         <option>Copper Utensils</option>
-                        <option>Bio Fertilizer &amp; Vermicompost</option>
+                        <option>Organic Fertilizer &amp; Vermicompost</option>
                         <option>Hing (Asafoetida)</option>
                         <option>Other / Custom Request</option>
                       </select>

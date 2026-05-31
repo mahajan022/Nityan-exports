@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { MessageCircle } from 'lucide-react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
@@ -42,6 +43,15 @@ export default function Layout({ children }) {
       <Navbar />
       <main>{children}</main>
       <Footer />
+      <a
+        href="https://wa.me/919311443912"
+        target="_blank"
+        rel="noreferrer"
+        className="whatsapp-float"
+        aria-label="Chat with us on WhatsApp"
+      >
+        <MessageCircle size={28} />
+      </a>
     </>
   );
 }

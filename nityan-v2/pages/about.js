@@ -7,7 +7,7 @@ const milestones = [
   { year: 'The Beginning',     title: 'Company Founded',           desc: 'Nityan Exports Pvt Ltd was established in Gurugram by Pawan Tripathi with a vision to connect Indian produce with global buyers.' },
   { year: 'First Milestone',   title: 'First International Export', desc: 'Successfully completed first international shipment of dehydrated spice powders to international markets.' },
   { year: 'Growing Portfolio', title: 'Expanded Product Range',    desc: 'Launched leather goods and handicraft export verticals, partnering with artisan communities across India.' },
-  { year: 'Manufacturing',     title: 'Bio Fertilizer Unit',       desc: 'Added in-house manufacturing of Bio Fertilizer and Vermicompost, expanding into sustainable agriculture products.' },
+  { year: 'Manufacturing',     title: 'Organic Fertilizer Unit',   desc: 'Added in-house manufacturing of Organic Fertilizer and Vermicompost, expanding into sustainable agriculture products.' },
   { year: 'Global Reach',      title: 'Serving Global Markets',    desc: 'Established direct sourcing networks with Indian manufacturers and farmers for buyers across multiple continents.' },
 ];
 
@@ -113,7 +113,7 @@ export default function About() {
                 <span className={styles.role}>Founder &amp; CEO</span>
                 <p>With deep roots in trade and a passion for showcasing Indian excellence, Pawan founded Nityan Exports to build a world-class export business from India, serving global buyers with integrity and commitment.</p>
                 <div className={styles.leaderContact}>
-                  <a href="tel:+919118985119">+91-9118985119</a>
+                  <a href="tel:+919311443912">+91-9311443912</a>
                   <span>·</span>
                   <a href="mailto:pawan@nityanexports.com">pawan@nityanexports.com</a>
                 </div>
