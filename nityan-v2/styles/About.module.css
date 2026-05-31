@@ -99,12 +99,15 @@
   .leaderCard { grid-template-columns:1fr; }
   .heroContent { padding:0 24px 40px; }
   .story,.values,.timeline,.leader,.cta { padding:70px 20px; }
+
+  /* Timeline stacks into a clean single column */
+  .line { left:7px; transform:none; }
+  .item { grid-template-columns:1fr !important; gap:0; margin-bottom:36px; padding-left:34px; position:relative; }
+  .left .year, .right .year { grid-column:1 !important; grid-row:auto !important; text-align:left !important; padding:0 0 10px 0 !important; font-size:1.9rem; }
+  .left .card, .right .card { grid-column:1 !important; grid-row:auto !important; text-align:left !important; padding:22px 26px !important; }
+  .left .dot, .right .dot { position:absolute; left:0; top:14px; justify-self:start; grid-column:auto; }
 }
 @media (max-width:640px) {
   .valGrid { grid-template-columns:1fr; }
-  .line { display:none; }
-  .item { grid-template-columns:auto 1fr !important; gap:0 14px; margin-bottom:32px; }
-  .left .year,  .right .year { grid-column:1; grid-row:1; text-align:left !important; padding:0 0 6px 0 !important; font-size:1.8rem; }
-  .left .card,  .right .card { grid-column:2; grid-row:1 !important; text-align:left !important; padding:0 !important; padding-left:0 !important; padding-right:0 !important; }
-  .left .dot,   .right .dot  { display:none; }
+  .left .year, .right .year { font-size:1.7rem; }
 }
