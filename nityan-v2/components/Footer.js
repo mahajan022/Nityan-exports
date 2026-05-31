@@ -30,8 +30,8 @@ export default function Footer() {
               <a href="tel:+919118985119" className={styles.contactRow}>
                 <Phone size={14} /><span>+91-9118985119</span>
               </a>
-              <a href="https://wa.me/919311443912" target="_blank" rel="noreferrer" className={styles.contactRow}>
-                <WhatsAppIcon size={14} /><span>WhatsApp: +91-9311443912</span>
+              <a href="https://wa.me/919118985119" target="_blank" rel="noreferrer" className={styles.contactRow}>
+                <WhatsAppIcon size={14} /><span>WhatsApp: +91-9118985119</span>
               </a>
               <a href="mailto:pawan@nityanexports.com" className={styles.contactRow}>
                 <Mail size={14} /><span>pawan@nityanexports.com</span>

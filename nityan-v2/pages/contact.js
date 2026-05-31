@@ -11,7 +11,7 @@ const WhatsAppIcon = ({ size = 18 }) => (
 
 const info = [
   { icon: <Phone size={18} />, label: 'Phone', content: <><a href="tel:+919311443912">+91-9311443912</a><a href="tel:+919118985119">+91-9118985119</a></> },
-  { icon: <WhatsAppIcon size={18} />, label: 'WhatsApp', content: <a href="https://wa.me/919311443912" target="_blank" rel="noreferrer">+91-9311443912</a> },
+  { icon: <WhatsAppIcon size={18} />, label: 'WhatsApp', content: <a href="https://wa.me/919118985119" target="_blank" rel="noreferrer">+91-9118985119</a> },
   { icon: <Mail size={18} />, label: 'Email', content: <><a href="mailto:pawan@nityanexports.com">pawan@nityanexports.com</a><a href="mailto:hello@nityanexports.com">hello@nityanexports.com</a></> },
   { icon: <Globe size={18} />, label: 'Website', content: <a href="http://www.nityanexports.com" target="_blank" rel="noreferrer">www.nityanexports.com</a> },
   { icon: <MapPin size={18} />, label: 'Address', content: <span>1201, Tower A7, Signature Global Solera,<br />Sector 107, Gurugram,<br />Haryana – 122006, India</span> },
