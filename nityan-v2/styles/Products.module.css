@@ -22,6 +22,8 @@
 .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
 .card { background:var(--white); border:1px solid var(--border); border-radius:2px; overflow:hidden; transition:box-shadow .22s, transform .22s, border-color .22s; }
 .card:hover { box-shadow:0 16px 48px rgba(0,0,0,.08); transform:translateY(-4px); border-color:var(--gold-border); }
+.card:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+.cardOpen { border-color:var(--gold) !important; box-shadow:0 16px 48px rgba(0,0,0,.08); }
 .catTag {
   position:absolute; top:14px; left:14px;
   background:var(--navy); color:#fff; font-size:.68rem; font-weight:700;

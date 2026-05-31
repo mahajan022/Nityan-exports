@@ -8,7 +8,7 @@ const cats = ['All','Agricultural','Pulses','Spice Powders','Organic','Craftsman
 
 const products = [
   { name:'Fresh Fruits & Vegetables',      cat:'Agricultural',  img:'/product1.png', short:'Farm-fresh seasonal produce exported globally with cold-chain logistics.',        desc:'We export a wide range of seasonal and exotic Indian fruits and vegetables, freshly sourced from farms with strict quality grading and phytosanitary compliance. Our vegetable range includes Potatoes, Onion, Tomato, Green Chilli, Garlic, Ginger, Drumstick (Moringa), and Bhindi (Okra). Our fruit range includes Apple, Chiku (Sapota), Grapes, Pomegranate, Mango, Guava, and Orange. Every consignment is graded, cleaned, and packed to international standards with full phytosanitary compliance and cold-chain logistics for maximum freshness on arrival.' },
-  { name:'Indian Pulses',                  cat:'Pulses',        img:'/product14.png', short:'Record-breaking Indian pulses — Chickpeas, Lentils, Peas & more, exported worldwide.',  desc:'India has achieved record-breaking growth in pulses exports, reaching 7.29 lakh metric tonnes in the 2024 calendar year, with export earnings surging from $211 million in FY 2020 to $686.9 million by FY 2023–24. We export premium Indian pulses including Chickpeas (Gram) — the leading variety at around 44.6% of national exports — along with Lentils, Peas, Black Gram, and Pigeon Peas. Sourced from major production hubs across Madhya Pradesh, Maharashtra, Rajasthan, Uttar Pradesh, and Karnataka, our pulses are cleaned, graded, and packed for buyers across Bangladesh, China, the UAE, the USA, and beyond.' },
+  { name:'Indian Pulses',                  cat:'Pulses',        img:'/product14.png', short:'Premium Indian pulses — Chickpeas, Lentils, Peas, Black Gram & Pigeon Peas.',  desc:'We export a premium range of Indian pulses including Chickpeas (Gram), Lentils, Peas, Black Gram, and Pigeon Peas. Sourced directly from major production hubs across Madhya Pradesh, Maharashtra, Rajasthan, Uttar Pradesh, and Karnataka, every lot is cleaned, sorted, and graded to international standards before being packed for export worldwide.' },
   { name:'Dehydrated Onion Powder',        cat:'Spice Powders', img:'/product7.png', short:'Hygienically processed and vacuum-packed for long shelf life.',                   desc:'Premium dehydrated onion powder processed in hygienic facilities, with consistent granule size and flavour profile meeting international food standards.' },
   { name:'Ginger Powder',                  cat:'Spice Powders', img:'/product8.png', short:'Aromatic, potent ginger powder from Indian farms.',                               desc:'Sun-dried and ground Indian ginger, renowned for its high gingerol content. Ideal for food processing, beverages, and pharmaceutical industries.' },
   { name:'Amla (Indian Gooseberry) Powder',cat:'Spice Powders', img:'/product9.png', short:'Vitamin C-rich superfood powder exported globally.',                              desc:'Spray-dried and cold-processed Amla powder retaining maximum nutritional value. Widely used in Ayurvedic supplements, nutraceuticals, and food products.' },
@@ -65,7 +65,15 @@ export default function Products() {
             {/* Grid — key on active forces full remount so fade-up re-fires */}
             <div className={styles.grid} key={active}>
               {filtered.map((p, i) => (
-                <div className={styles.card} key={p.name}>
+                <div
+                  className={`${styles.card} ${expanded === p.name ? styles.cardOpen : ''}`}
+                  key={p.name}
+                  onClick={() => setExpand(expanded === p.name ? null : p.name)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setExpand(expanded === p.name ? null : p.name); } }}
+                  style={{ cursor:'pointer' }}
+                >
                   <div style={{ position:'relative' }}>
                     <img src={p.img} alt={p.name} style={{ width:'100%', height:220, objectFit:'cover', borderRadius:'8px 8px 0 0', display:'block' }} />
                     <span className={styles.catTag}>{p.cat}</span>
@@ -74,9 +82,6 @@ export default function Products() {
                     <h3>{p.name}</h3>
                     <p className={styles.short}>{p.short}</p>
                     {expanded === p.name && <p className={styles.long}>{p.desc}</p>}
-                    <button className={styles.toggle} onClick={() => setExpand(expanded === p.name ? null : p.name)}>
-                      {expanded === p.name ? 'Show Less ↑' : 'Product Details →'}
-                    </button>
                   </div>
                 </div>
               ))}
