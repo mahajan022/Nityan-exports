@@ -21,9 +21,44 @@ const info = [
 export default function Contact() {
   const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', product: '', message: '' });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const handle = e => setForm({ ...form, [e.target.name]: e.target.value });
-  const submit = e => { e.preventDefault(); setSent(true); };
+
+  const submit = async e => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError('');
+    try {
+      const res = await fetch('https://formspree.io/f/xbdbebqj', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          company: form.company,
+          email: form.email,
+          phone: form.phone,
+          product: form.product,
+          message: form.message,
+          _subject: `New enquiry from ${form.name || 'website'} — Nityan Exports`,
+        }),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setError(
+          data?.errors?.map(er => er.message).join(', ') ||
+          'Something went wrong. Please try again or email us directly.'
+        );
+      }
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -130,8 +165,11 @@ export default function Contact() {
                       <label>Your Message / Requirements *</label>
                       <textarea name="message" value={form.message} onChange={handle} required rows={5} placeholder="Please describe your requirements — quantity, destination, packaging preferences, etc." />
                     </div>
-                    <button type="submit" className={styles.submitBtn}>
-                      Send Enquiry <Send size={15} />
+                    {error && (
+                      <p style={{ color: '#c0392b', fontSize: '.85rem', marginTop: 4, marginBottom: 4 }}>{error}</p>
+                    )}
+                    <button type="submit" className={styles.submitBtn} disabled={submitting} style={submitting ? { opacity: .7, cursor: 'not-allowed' } : undefined}>
+                      {submitting ? 'Sending…' : <>Send Enquiry <Send size={15} /></>}
                     </button>
                   </form>
                 )}
