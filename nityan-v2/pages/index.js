@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Globe, Shield, TrendingUp, Award, ChevronDown, CheckCircle, Leaf, Package, Clock } from 'lucide-react';
 import styles from '../styles/Home.module.css';
 
-const tickerItems = ['Fruits & Vegetables','Indian Pulses','Dehydrated Onion Powder','Ginger Powder','Garlic Powder','Amla Powder','Banana Powder','Leather Goods','Handicrafts','Copper Utensils','Organic Fertilizer','Vermicompost','Hing (Asafoetida)'];
+const tickerItems = ['Fruits & Vegetables','Dehydrated Onion Powder','Ginger Powder','Garlic Powder','Amla Powder','Banana Powder','Leather Goods','Handicrafts','Copper Utensils','Bio Fertilizer','Vermicompost','Hing (Asafoetida)'];
 
 const stats = [
   { n: '50+',  l: 'Export Products' },
@@ -14,11 +14,10 @@ const stats = [
 
 const products = [
   { name: 'Fruits & Vegetables',  cat: 'Agricultural',  desc: 'Farm-fresh, handpicked produce with cold-chain logistics to international markets.' },
-  { name: 'Indian Pulses',        cat: 'Pulses',        desc: 'Chickpeas, Lentils, Peas, Black Gram & Pigeon Peas — record-breaking Indian pulses exported worldwide.' },
   { name: 'Spice & Herb Powders', cat: 'Spice Powders', desc: 'Dehydrated Onion, Ginger, Garlic, Amla & Banana Powder — hygienically processed.' },
   { name: 'Leather Goods',        cat: 'Craftsmanship', desc: 'Premium Indian leather craftsmanship meeting global quality and finishing standards.' },
   { name: 'Handicrafts & Copper', cat: 'Craftsmanship', desc: 'Authentic Indian artistry — copper utensils, décor, and handmade ethnic creations.' },
-  { name: 'Organic Fertilizer',   cat: 'Organic',       desc: 'Organic Fertilizer and Vermicompost for sustainable agriculture worldwide.' },
+  { name: 'Bio Fertilizer',       cat: 'Organic',       desc: 'Organic Bio Fertilizer and Vermicompost for sustainable agriculture worldwide.' },
   { name: 'Hing (Asafoetida)',    cat: 'Spice Powders', desc: 'Pure, high-grade Hing sourced and exported with strict quality control.' },
 ];
 
