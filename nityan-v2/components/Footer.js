@@ -81,7 +81,7 @@ export default function Footer() {
       </div>
       <div className={styles.bottom}>
         <div className={styles.bottomInner}>
-          <p>© {new Date().getFullYear()} Nityan Exports Pvt Ltd. All rights reserved.</p>
+          <p>Copyright @ 2026 Nityan Exports Pvt Ltd. All rights reserved.</p>
           <p>Designed for global trade excellence.</p>
         </div>
       </div>
